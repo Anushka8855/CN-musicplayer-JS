@@ -1,0 +1,79 @@
+<!DOCTYPE >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/e896f41ca9.js" crossorigin="anonymous"></script>
+</head>
+<body data-theme="light">
+    <header>
+        <!-- <div>
+            <button id="theme-toggle">Dark</button>
+        </div> -->
+        <div class="toggle-container">
+            <label class="switch">
+              <input type="checkbox" id="theme-toggle">
+              <span class="slider"></span>
+              Dark
+
+            </label>
+        </div>
+        <h1>Music Player</h1>
+    </header>
+    
+    <main>
+        <section id="all-songs">
+            <label for="genre-filter">Filter by Genre:</label>
+            <select id="genre-filter">
+                <option value="all">All</option>
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="jazz">Jazz</option>
+            </select>
+            
+            <h1>All Songs</h1>
+
+            <ul id="songs-list">
+                <!-- Songs will be dynamically filled -->
+            </ul>
+        </section>
+
+        <section id="song-card">
+            <div id="song-container">
+                <!-- <img id="song-image" src="placeholder.jpg" alt="Album Photo" />
+                <h2 id="song-title">Song Title</h2>
+                <p id="artist-name">Artist Name</p> -->
+            </div>
+            
+            <audio id="audio-player" controls>
+                <!-- Audio player -->
+            </audio>
+            <!-- <div class="player-buttons">
+                <button type="button" id="prev-btn">
+                    <i class="fa-solid fa-left-long"></i>
+                </button>
+                <button type="button" id="next-btn">
+                    <i class="fa-solid fa-right-long"></i>
+                </button>
+
+            </div> -->
+            <button type="button" id="add-btn">Add to Playlist</button>
+        </section>
+
+        <section id="playlist">
+            <div class="create-new-playlist">
+                <input type="text" id="new-playlist-name" placeholder="Enter Playlist Name" />
+                <button id="create-playlist">Create Playlist</button>
+            </div>
+            
+            <ul id="playlist-list">
+                <!-- Playlists will be dynamically filled -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
